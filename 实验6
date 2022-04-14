@@ -1,0 +1,39 @@
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ sudo chown -R dx ~/.ros
+[sudo] dx 的密码： 
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosnode list
+/rosout
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosnode info /rosout
+--------------------------------------------------------------------------------
+Node [/rosout]
+Publications: 
+ * /rosout_agg [rosgraph_msgs/Log]
+
+Subscriptions: 
+ * /rosout [unknown type]
+
+Services: 
+ * /rosout/get_loggers
+ * /rosout/set_logger_level
+
+
+contacting node http://dx-OMEN-by-HP-Laptop-15-dc1xxx:37839/ ...
+Pid: 8087
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$  rosrun [package_name] [node_name]
+[rospack] Error: package '[package_name]' not found
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosrun turtlesim turtlesim_node
+[ INFO] [1649943607.424618039]: Starting turtlesim with node name /turtlesim
+[ INFO] [1649943607.427869359]: Spawning turtle [turtle1] at x=[5.544445], y=[5.544445], theta=[0.000000]
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosnode list
+/my_turtle
+/rosout
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$  rosnode ping my_turtle
+rosnode: node is [/my_turtle]
+pinging /my_turtle with a timeout of 3.0s
+xmlrpc reply from http://dx-OMEN-by-HP-Laptop-15-dc1xxx:39849/	time=0.338316ms
+xmlrpc reply from http://dx-OMEN-by-HP-Laptop-15-dc1xxx:39849/	time=0.573874ms
+xmlrpc reply from http://dx-OMEN-by-HP-Laptop-15-dc1xxx:39849/	time=1.097441ms
+xmlrpc reply from http://dx-OMEN-by-HP-Laptop-15-dc1xxx:39849/	time=1.050949ms
+xmlrpc reply from http://dx-OMEN-by-HP-Laptop-15-dc1xxx:39849/	time=0.748634ms
+
+
+

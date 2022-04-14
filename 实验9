@@ -1,0 +1,28 @@
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ sudo apt-get install ros-<distro>-rqt ros-<distro>-rqt-common-plugins ros-<distro>-turtlesim
+bash: distro: 没有那个文件或目录
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ sudo apt-get install ros-noetic-rqt ros-noetic-rqt-common-plugins ros-noetic-turtlesim
+[sudo] dx 的密码： 
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+E: 无法定位软件包 ros-noetic-rqt
+
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$  rosrun rqt_logger_level rqt_logger_level
+
+
+[ WARN] [1649946184.883321862]: Oh no! I hit the wall! (Clamping from [x=11.120889, y=5.544445])
+[ WARN] [1649946184.898651526]: Oh no! I hit the wall! (Clamping from [x=11.120889, y=5.544445])
+[ WARN] [1649946184.915350320]: Oh no! I hit the wall! (Clamping from [x=11.120889, y=5.544445])
+[ WARN] [1649946184.930634059]: Oh no! I hit the wall! (Clamping from [x=11.120889, y=5.544445])
+
+
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rostopic pub /turtle1/cmd_vel geometry_msgs/Twist -r 1 -- '[2.0, 0.0, 0.0]' '[0.0, 0.0, 0.0]'
+
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ $ roslaunch beginner_tutorials turtlemimic.launch
+$：未找到命令
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ $ rostopic pub /turtlesim1/turtle1/cmd_vel geometry_msgs/Twist -r 1 -- '[2.0, 0.0, 0.0]' '[0.0, 0.0, -1.8]'
+$：未找到命令
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rostopic pub /turtlesim1/turtle1/cmd_vel geometry_msgs/Twist -r 1 -- '[2.0, 0.0, 0.0]' '[0.0, 0.0, -1.8]'
+
+
+

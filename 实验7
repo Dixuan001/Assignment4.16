@@ -1,0 +1,114 @@
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ sudo apt-get install ros-indigo-rqt
+[sudo] dx 的密码： 
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+E: 无法定位软件包 ros-indigo-rqt
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ sudo apt-get install ros-indigo-rqt-common-plugins
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+E: 无法定位软件包 ros-indigo-rqt-common-plugins
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosrun rqt_graph rqt_graph
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosrun rqt_graph rqt_graph
+
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rostopic -h
+rostopic is a command-line tool for printing information about ROS Topics.
+
+Commands:
+	rostopic bw	display bandwidth used by topic
+	rostopic delay	display delay of topic from timestamp in header
+	rostopic echo	print messages to screen
+	rostopic find	find topics by type
+	rostopic hz	display publishing rate of topic    
+	rostopic info	print information about active topic
+	rostopic list	list active topics
+	rostopic pub	publish data to topic
+	rostopic type	print topic or field type
+
+Type rostopic <command> -h for more detailed usage, e.g. 'rostopic echo -h'
+
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rostopic echo /turtle1/cmd_vel
+linear: 
+  x: 2.0
+  y: 0.0
+  z: 0.0
+angular: 
+  x: 0.0
+  y: 0.0
+  
+  
+  Options:
+  -h, --help            show this help message and exit
+  -b BAGFILE, --bag=BAGFILE
+                        list topics in .bag file
+  -v, --verbose         list full details about each topic
+  -p                    list only publishers
+  -s                    list only subscribers
+  --host                group by host name
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rostopic list -v
+
+Published topics:
+ * /rosout_agg [rosgraph_msgs/Log] 1 publisher
+ * /rosout [rosgraph_msgs/Log] 6 publishers
+ * /turtle1/pose [turtlesim/Pose] 1 publisher
+ * /turtle1/color_sensor [turtlesim/Color] 1 publisher
+ * /turtle1/cmd_vel [geometry_msgs/Twist] 1 publisher
+
+Subscribed topics:
+ * /rosout [rosgraph_msgs/Log] 1 subscriber
+ * /turtle1/cmd_vel [geometry_msgs/Twist] 3 subscribers
+ * /statistics [rosgraph_msgs/TopicStatistics] 2 subscribers
+
+
+x@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rostopic type /turtle1/cmd_vel
+geometry_msgs/Twist
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosmsg show geometry_msgs/Twist
+geometry_msgs/Vector3 linear
+  float64 x
+  float64 y
+  float64 z
+geometry_msgs/Vector3 angular
+  float64 x
+  float64 y
+  float64 z
+
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rostopic pub -1 /turtle1/cmd_vel geometry_msgs/Twist -- '[2.0, 0.0, 0.0]' '[0.0, 0.0, 1.8]'
+publishing and latching message for 3.0 seconds
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rostopic pub /turtle1/cmd_vel geometry_msgs/Twist -r 1 -- '[2.0, 0.0, 0.0]' '[0.0, 0.0, 1.8]'
+
+
+x@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rostopic hz /turtle1/pose
+subscribed to [/turtle1/pose]
+average rate: 62.496
+	min: 0.015s max: 0.017s std dev: 0.00051s window: 62
+average rate: 62.483
+	min: 0.015s max: 0.017s std dev: 0.00052s window: 125
+average rate: 62.499
+	min: 0.014s max: 0.017s std dev: 0.00055s window: 187
+average rate: 62.491
+	min: 0.014s max: 0.018s std dev: 0.00056s window: 250
+average rate: 62.508
+	min: 0.014s max: 0.018s std dev: 0.00055s window: 313
+average rate: 62.501
+	min: 0.014s max: 0.018s std dev: 0.00054s window: 375
+average rate: 62.509
+	min: 0.014s max: 0.018s std dev: 0.00054s window: 438
+average rate: 62.503
+
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rostopic type /turtle1/cmd_vel | rosmsg show
+geometry_msgs/Vector3 linear
+  float64 x
+  float64 y
+  float64 z
+geometry_msgs/Vector3 angular
+  float64 x
+  float64 y
+  float64 z
+  
+  dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosrun rqt_plot rqt_plot
+/opt/ros/noetic/lib/python3/dist-packages/rqt_plot/data_plot/mat_data_plot.py:123: UserWarning: Tight layout not applied. The bottom and top margins cannot be made large enough to accommodate all axes decorations. 
+  self.figure.tight_layout()
+
+
+

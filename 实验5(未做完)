@@ -1,0 +1,8 @@
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ source /opt/ros/noetic/setup.zsh
+bash: cd: -q：无效选项
+cd：用法： cd [-L|[-P [-e]] [-@]] [目录]
+emulate：未找到命令
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ catkin_make [make_targets] [-DCMAKE_VARIABLES=...]
+Base path: /home/dx
+The specified source space "/home/dx/src" does not exist
+

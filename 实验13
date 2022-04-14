@@ -1,0 +1,37 @@
+x@dx-OMEN-by-HP-Laptop-15-dc1xxx:~/catkin_ws$ cd ~/catkin_ws
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~/catkin_ws$ source /home/dx/catkin_ws/devel/setup.zsh
+bash: cd: -q：无效选项
+cd：用法： cd [-L|[-P [-e]] [-@]] [目录]
+emulate：未找到命令
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~/catkin_ws$ rosrun beginner_tutorials talker      (C++)
+bash: 未预期的符号“(”附近有语法错误
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~/catkin_ws$ rosrun beginner_tutorials talker
+[ INFO] [1650006847.797673415]: hello world 0
+[ INFO] [1650006847.897892509]: hello world 1
+[ INFO] [1650006847.997799582]: hello world 2
+[ INFO] [1650006848.097803024]: hello world 3
+[ INFO] [1650006848.197823503]: hello world 4
+[ INFO] [1650006848.297840729]: hello world 5
+[ INFO] [1650006848.397914834]: hello world 6
+[ INFO] [1650006848.497771322]: hello world 7
+[ INFO] [1650006848.597773535]: hello world 8
+[ INFO] [1650006848.697738683]: hello world 9
+[ INFO] [1650006848.797840583]: hello world 10
+[ INFO] [1650006848.897734722]: hello world 11
+[ INFO] [1650006848.997728283]: hello world 12
+
+
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~/catkin_ws$ rosrun beginner_tutorials listener 
+[ INFO] [1650006889.498456063]: I heard: [hello world 417]
+[ INFO] [1650006889.598258247]: I heard: [hello world 418]
+[ INFO] [1650006889.698262461]: I heard: [hello world 419]
+[ INFO] [1650006889.798300299]: I heard: [hello world 420]
+[ INFO] [1650006889.898207664]: I heard: [hello world 421]
+[ INFO] [1650006889.998267683]: I heard: [hello world 422]
+[ INFO] [1650006890.098276000]: I heard: [hello world 423]
+[ INFO] [1650006890.198206577]: I heard: [hello world 424]
+[ INFO] [1650006890.298302709]: I heard: [hello world 425]
+[ INFO] [1650006890.398298817]: I heard: [hello world 426]
+[ INFO] [1650006890.498319853]: I heard: [hello world 427]
+[ INFO] [1650006890.598166148]: I heard: [hello world 428]
+

@@ -1,0 +1,78 @@
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosservice list
+/clear
+/kill
+/reset
+/rosout/get_loggers
+/rosout/set_logger_level
+/spawn
+/teleop_turtle/get_loggers
+/teleop_turtle/set_logger_level
+/turtle1/set_pen
+/turtle1/teleport_absolute
+/turtle1/teleport_relative
+/turtlesim/get_loggers
+/turtlesim/set_logger_level
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosservice type clear
+std_srvs/Empty
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosservice call clear
+
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosservice type spawn| rossrv show
+float32 x
+float32 y
+float32 theta
+string name
+---
+string name
+
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ osservice call spawn 2 2 0.2 ""
+
+Command 'osservice' not found, did you mean:
+
+  command 'rosservice' from deb python3-rosservice (1.14.3+ds1-11ubuntu5)
+
+Try: sudo apt install <deb name>
+
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosservice call spawn 2 2 0.2 ""
+name: "turtle2"
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosparam list
+/rosdistro
+/roslaunch/uris/host_dx_omen_by_hp_laptop_15_dc1xxx__36805
+/rosversion
+/run_id
+/turtlesim/background_b
+/turtlesim/background_g
+/turtlesim/background_r
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosparam set background_r 150
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosservice call clear
+
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosparam get background_g 
+ERROR: Parameter [/background_g] is not set
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosparam get background_g 
+ERROR: Parameter [/background_g] is not set
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosparam set background_r 150
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosparam get background_g 
+ERROR: Parameter [/background_g] is not set
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosparam get /
+background_r: 150
+rosdistro: 'noetic
+
+  '
+roslaunch:
+  uris:
+    host_dx_omen_by_hp_laptop_15_dc1xxx__36805: http://dx-OMEN-by-HP-Laptop-15-dc1xxx:36805/
+rosversion: '1.15.14
+
+  '
+run_id: 5cb45f42-bc8e-11ec-b739-cbaa985b27f5
+turtlesim:
+  background_b: 255
+  background_g: 86
+  background_r: 69
+
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosparam dump params.yaml
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosparam load params.yaml copy
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosparam get copy/background_b
+ERROR: Parameter [/copy/background_b] is not set
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ 
+
+

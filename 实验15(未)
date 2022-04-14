@@ -1,0 +1,11 @@
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosrun beginner_tutorials add_two_ints_server
+[rosrun] Couldn't find executable named add_two_ints_server below /home/dx/catkin_ws/src/beginner_tutorials
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosrun rospy_tutorials add_two_ints_server
+Unable to register with master node [http://localhost:11311]: master may not be running yet. Will keep trying.
+
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosrun roscpp_tutorials add_two_ints_server
+[ERROR] [1650007766.351810320]: [registerPublisher] Failed to contact master at [localhost:11311].  Retrying...
+
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ rosrun beginner_tutorials add_two_ints_client 1 3 
+[rosrun] Couldn't find executable named add_two_ints_client below /home/dx/catkin_ws/src/beginner_tutorials
+

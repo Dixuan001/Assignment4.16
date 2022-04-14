@@ -1,0 +1,56 @@
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~$ cd ~/catkin_ws/src/beginner_tutorials
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~/catkin_ws/src/beginner_tutorials$ mkdir -p ~/catkin_ws/src/beginner_tutorials/src
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~/catkin_ws/src/beginner_tutorials$ ros::init(argc, argv, "talker");
+bash: 未预期的符号“argc,”附近有语法错误
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~/catkin_ws/src/beginner_tutorials$ catkin_make
+Base path: /home/dx/catkin_ws/src/beginner_tutorials
+The specified base path "/home/dx/catkin_ws/src/beginner_tutorials" contains a package but "catkin_make" must be invoked in the root of workspace
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~/catkin_ws/src/beginner_tutorials$ cd ~/catkin_ws
+dx@dx-OMEN-by-HP-Laptop-15-dc1xxx:~/catkin_ws$ catkin_make 
+Base path: /home/dx/catkin_ws
+Source space: /home/dx/catkin_ws/src
+Build space: /home/dx/catkin_ws/build
+Devel space: /home/dx/catkin_ws/devel
+Install space: /home/dx/catkin_ws/install
+####
+#### Running command: "make cmake_check_build_system" in "/home/dx/catkin_ws/build"
+####
+-- Using CATKIN_DEVEL_PREFIX: /home/dx/catkin_ws/devel
+-- Using CMAKE_PREFIX_PATH: /home/dx/catkin_ws/devel;/opt/ros/noetic
+-- This workspace overlays: /home/dx/catkin_ws/devel;/opt/ros/noetic
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using Debian Python package layout
+-- Using empy: /usr/lib/python3/dist-packages/em.py
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/dx/catkin_ws/build/test_results
+-- Forcing gtest/gmock from source, though one was otherwise available.
+-- Found gtest sources under '/usr/src/googletest': gtests will be built
+-- Found gmock sources under '/usr/src/googletest': gmock will be built
+-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+-- Using Python nosetests: /usr/bin/nosetests3
+-- catkin 0.8.10
+-- BUILD_SHARED_LIBS is on
+-- BUILD_SHARED_LIBS is on
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- ~~  traversing 1 packages in topological order:
+-- ~~  - beginner_tutorials
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- +++ processing catkin package: 'beginner_tutorials'
+-- ==> add_subdirectory(beginner_tutorials)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/dx/catkin_ws/build
+####
+#### Running command: "make -j8 -l8" in "/home/dx/catkin_ws/build"
+####
+Scanning dependencies of target listener
+Scanning dependencies of target talker
+[ 50%] Building CXX object beginner_tutorials/CMakeFiles/talker.dir/src/talker.cpp.o
+[ 50%] Building CXX object beginner_tutorials/CMakeFiles/listener.dir/src/listener.cpp.o
+[ 75%] Linking CXX executable /home/dx/catkin_ws/devel/lib/beginner_tutorials/talker
+[100%] Linking CXX executable /home/dx/catkin_ws/devel/lib/beginner_tutorials/listener
+[100%] Built target talker
+[100%] Built target listener
+
